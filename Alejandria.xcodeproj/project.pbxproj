@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		120DCFA11E4FB72B002D4455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 120DCFA01E4FB72B002D4455 /* main.m */; };
+		120DCFA41E4FB72B002D4455 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 120DCFA31E4FB72B002D4455 /* AppDelegate.m */; };
+		120DCFA71E4FB72B002D4455 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120DCFA61E4FB72B002D4455 /* ViewController.m */; };
+		120DCFAA1E4FB72B002D4455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DCFA81E4FB72B002D4455 /* Main.storyboard */; };
+		120DCFAC1E4FB72B002D4455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120DCFAB1E4FB72B002D4455 /* Assets.xcassets */; };
+		120DCFAF1E4FB72B002D4455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120DCFAD1E4FB72B002D4455 /* LaunchScreen.storyboard */; };
+		120DCFBA1E4FB72B002D4455 /* AlejandriaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 120DCFB91E4FB72B002D4455 /* AlejandriaTests.m */; };
+		120DCFC51E4FB72B002D4455 /* AlejandriaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 120DCFC41E4FB72B002D4455 /* AlejandriaUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		120DCFB61E4FB72B002D4455 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 120DCF941E4FB72B002D4455 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 120DCF9B1E4FB72B002D4455;
+			remoteInfo = Alejandria;
+		};
+		120DCFC11E4FB72B002D4455 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 120DCF941E4FB72B002D4455 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 120DCF9B1E4FB72B002D4455;
+			remoteInfo = Alejandria;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		120DCF9C1E4FB72B002D4455 /* Alejandria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alejandria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		120DCFA01E4FB72B002D4455 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		120DCFA21E4FB72B002D4455 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		120DCFA31E4FB72B002D4455 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		120DCFA51E4FB72B002D4455 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		120DCFA61E4FB72B002D4455 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		120DCFA91E4FB72B002D4455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		120DCFAB1E4FB72B002D4455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		120DCFAE1E4FB72B002D4455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		120DCFB01E4FB72B002D4455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120DCFB51E4FB72B002D4455 /* AlejandriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlejandriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		120DCFB91E4FB72B002D4455 /* AlejandriaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlejandriaTests.m; sourceTree = "<group>"; };
+		120DCFBB1E4FB72B002D4455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120DCFC01E4FB72B002D4455 /* AlejandriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlejandriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		120DCFC41E4FB72B002D4455 /* AlejandriaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlejandriaUITests.m; sourceTree = "<group>"; };
+		120DCFC61E4FB72B002D4455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		120DCF991E4FB72B002D4455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120DCFB21E4FB72B002D4455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120DCFBD1E4FB72B002D4455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		120DCF931E4FB72B002D4455 = {
+			isa = PBXGroup;
+			children = (
+				120DCF9E1E4FB72B002D4455 /* Alejandria */,
+				120DCFB81E4FB72B002D4455 /* AlejandriaTests */,
+				120DCFC31E4FB72B002D4455 /* AlejandriaUITests */,
+				120DCF9D1E4FB72B002D4455 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		120DCF9D1E4FB72B002D4455 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				120DCF9C1E4FB72B002D4455 /* Alejandria.app */,
+				120DCFB51E4FB72B002D4455 /* AlejandriaTests.xctest */,
+				120DCFC01E4FB72B002D4455 /* AlejandriaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		120DCF9E1E4FB72B002D4455 /* Alejandria */ = {
+			isa = PBXGroup;
+			children = (
+				120DCFA21E4FB72B002D4455 /* AppDelegate.h */,
+				120DCFA31E4FB72B002D4455 /* AppDelegate.m */,
+				120DCFA51E4FB72B002D4455 /* ViewController.h */,
+				120DCFA61E4FB72B002D4455 /* ViewController.m */,
+				120DCFA81E4FB72B002D4455 /* Main.storyboard */,
+				120DCFAB1E4FB72B002D4455 /* Assets.xcassets */,
+				120DCFAD1E4FB72B002D4455 /* LaunchScreen.storyboard */,
+				120DCFB01E4FB72B002D4455 /* Info.plist */,
+				120DCF9F1E4FB72B002D4455 /* Supporting Files */,
+			);
+			path = Alejandria;
+			sourceTree = "<group>";
+		};
+		120DCF9F1E4FB72B002D4455 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				120DCFA01E4FB72B002D4455 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		120DCFB81E4FB72B002D4455 /* AlejandriaTests */ = {
+			isa = PBXGroup;
+			children = (
+				120DCFB91E4FB72B002D4455 /* AlejandriaTests.m */,
+				120DCFBB1E4FB72B002D4455 /* Info.plist */,
+			);
+			path = AlejandriaTests;
+			sourceTree = "<group>";
+		};
+		120DCFC31E4FB72B002D4455 /* AlejandriaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				120DCFC41E4FB72B002D4455 /* AlejandriaUITests.m */,
+				120DCFC61E4FB72B002D4455 /* Info.plist */,
+			);
+			path = AlejandriaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		120DCF9B1E4FB72B002D4455 /* Alejandria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120DCFC91E4FB72B002D4455 /* Build configuration list for PBXNativeTarget "Alejandria" */;
+			buildPhases = (
+				120DCF981E4FB72B002D4455 /* Sources */,
+				120DCF991E4FB72B002D4455 /* Frameworks */,
+				120DCF9A1E4FB72B002D4455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alejandria;
+			productName = Alejandria;
+			productReference = 120DCF9C1E4FB72B002D4455 /* Alejandria.app */;
+			productType = "com.apple.product-type.application";
+		};
+		120DCFB41E4FB72B002D4455 /* AlejandriaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120DCFCC1E4FB72B002D4455 /* Build configuration list for PBXNativeTarget "AlejandriaTests" */;
+			buildPhases = (
+				120DCFB11E4FB72B002D4455 /* Sources */,
+				120DCFB21E4FB72B002D4455 /* Frameworks */,
+				120DCFB31E4FB72B002D4455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				120DCFB71E4FB72B002D4455 /* PBXTargetDependency */,
+			);
+			name = AlejandriaTests;
+			productName = AlejandriaTests;
+			productReference = 120DCFB51E4FB72B002D4455 /* AlejandriaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		120DCFBF1E4FB72B002D4455 /* AlejandriaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120DCFCF1E4FB72B002D4455 /* Build configuration list for PBXNativeTarget "AlejandriaUITests" */;
+			buildPhases = (
+				120DCFBC1E4FB72B002D4455 /* Sources */,
+				120DCFBD1E4FB72B002D4455 /* Frameworks */,
+				120DCFBE1E4FB72B002D4455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				120DCFC21E4FB72B002D4455 /* PBXTargetDependency */,
+			);
+			name = AlejandriaUITests;
+			productName = AlejandriaUITests;
+			productReference = 120DCFC01E4FB72B002D4455 /* AlejandriaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		120DCF941E4FB72B002D4455 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Alex Diaz";
+				TargetAttributes = {
+					120DCF9B1E4FB72B002D4455 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T888UUHB3E;
+						ProvisioningStyle = Automatic;
+					};
+					120DCFB41E4FB72B002D4455 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T888UUHB3E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 120DCF9B1E4FB72B002D4455;
+					};
+					120DCFBF1E4FB72B002D4455 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T888UUHB3E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 120DCF9B1E4FB72B002D4455;
+					};
+				};
+			};
+			buildConfigurationList = 120DCF971E4FB72B002D4455 /* Build configuration list for PBXProject "Alejandria" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 120DCF931E4FB72B002D4455;
+			productRefGroup = 120DCF9D1E4FB72B002D4455 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				120DCF9B1E4FB72B002D4455 /* Alejandria */,
+				120DCFB41E4FB72B002D4455 /* AlejandriaTests */,
+				120DCFBF1E4FB72B002D4455 /* AlejandriaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		120DCF9A1E4FB72B002D4455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120DCFAF1E4FB72B002D4455 /* LaunchScreen.storyboard in Resources */,
+				120DCFAC1E4FB72B002D4455 /* Assets.xcassets in Resources */,
+				120DCFAA1E4FB72B002D4455 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120DCFB31E4FB72B002D4455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120DCFBE1E4FB72B002D4455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		120DCF981E4FB72B002D4455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120DCFA71E4FB72B002D4455 /* ViewController.m in Sources */,
+				120DCFA41E4FB72B002D4455 /* AppDelegate.m in Sources */,
+				120DCFA11E4FB72B002D4455 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120DCFB11E4FB72B002D4455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120DCFBA1E4FB72B002D4455 /* AlejandriaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		120DCFBC1E4FB72B002D4455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120DCFC51E4FB72B002D4455 /* AlejandriaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		120DCFB71E4FB72B002D4455 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 120DCF9B1E4FB72B002D4455 /* Alejandria */;
+			targetProxy = 120DCFB61E4FB72B002D4455 /* PBXContainerItemProxy */;
+		};
+		120DCFC21E4FB72B002D4455 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 120DCF9B1E4FB72B002D4455 /* Alejandria */;
+			targetProxy = 120DCFC11E4FB72B002D4455 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		120DCFA81E4FB72B002D4455 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				120DCFA91E4FB72B002D4455 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		120DCFAD1E4FB72B002D4455 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				120DCFAE1E4FB72B002D4455 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		120DCFC71E4FB72B002D4455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		120DCFC81E4FB72B002D4455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		120DCFCA1E4FB72B002D4455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T888UUHB3E;
+				INFOPLIST_FILE = Alejandria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonGroup.Alejandria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		120DCFCB1E4FB72B002D4455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T888UUHB3E;
+				INFOPLIST_FILE = Alejandria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonGroup.Alejandria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		120DCFCD1E4FB72B002D4455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T888UUHB3E;
+				INFOPLIST_FILE = AlejandriaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonGroup.AlejandriaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alejandria.app/Alejandria";
+			};
+			name = Debug;
+		};
+		120DCFCE1E4FB72B002D4455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T888UUHB3E;
+				INFOPLIST_FILE = AlejandriaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonGroup.AlejandriaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alejandria.app/Alejandria";
+			};
+			name = Release;
+		};
+		120DCFD01E4FB72B002D4455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T888UUHB3E;
+				INFOPLIST_FILE = AlejandriaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonGroup.AlejandriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Alejandria;
+			};
+			name = Debug;
+		};
+		120DCFD11E4FB72B002D4455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T888UUHB3E;
+				INFOPLIST_FILE = AlejandriaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IonGroup.AlejandriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Alejandria;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		120DCF971E4FB72B002D4455 /* Build configuration list for PBXProject "Alejandria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120DCFC71E4FB72B002D4455 /* Debug */,
+				120DCFC81E4FB72B002D4455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		120DCFC91E4FB72B002D4455 /* Build configuration list for PBXNativeTarget "Alejandria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120DCFCA1E4FB72B002D4455 /* Debug */,
+				120DCFCB1E4FB72B002D4455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		120DCFCC1E4FB72B002D4455 /* Build configuration list for PBXNativeTarget "AlejandriaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120DCFCD1E4FB72B002D4455 /* Debug */,
+				120DCFCE1E4FB72B002D4455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		120DCFCF1E4FB72B002D4455 /* Build configuration list for PBXNativeTarget "AlejandriaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120DCFD01E4FB72B002D4455 /* Debug */,
+				120DCFD11E4FB72B002D4455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 120DCF941E4FB72B002D4455 /* Project object */;
+}
