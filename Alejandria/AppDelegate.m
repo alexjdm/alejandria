@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Helpers.h"
+#import "MTMigration.h"
+#import "DatabaseHelper.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +17,55 @@
 
 @implementation AppDelegate
 
+@synthesize databaseName;
+@synthesize databasePath;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.databaseName = @"alejandria.db";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [documentPaths objectAtIndex:0];
+    self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
+    
+    NSLog(@"Esta es la direccion de la base de datos:%@", self.databasePath);
+    [self createAndCheckDatabase];
+    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    
+    //iniciar método de actualización.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    //Instanciamos Controlador Principal y enviamos el control a él.
+    [Helpers logToDb:@"Iniciando" : @"didFinishLaunchingWithOptions"];
+    _principalController = [[PrincipalController alloc] init];
+    _principalController.ventanaPrincipal=self.window;
+    
+    //Funcion Principal
+    [_principalController IniciarApp];
+    
+    //Al cambiar numero de versión, ejecuta el "recreateDatabase"
+    //[DatabaseHelper recreateDatabase];
+    [MTMigration applicationUpdateBlock:^{
+        [DatabaseHelper recreateDatabase];
+    }];
+    
+    // Register notifications types
+    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
+    //[self generateLocalNotification]; // Para testear notificaciones
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    if ([launchOptions objectForKey:UIApplicationLaunchOptionsLocationKey])
+    {
+        [Helpers logToDb:@"Iniciando desde SignicantLocationChange" : @"didFinishLaunchingWithOptions"];
+    }
+
+    
     return YES;
 }
 
@@ -45,6 +94,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void) createAndCheckDatabase
+{
+    BOOL success;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    success = [fileManager fileExistsAtPath:databasePath];
+    
+    if(success) return;
+    
+    NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseName];
+    
+    [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
 }
 
 
