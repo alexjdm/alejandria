@@ -11,6 +11,7 @@
 #import "Libro_DTO.h"
 #import "LibroTableViewCell.h"
 #import "BookViewController.h"
+#import "User_Setup_DAO.h"
 
 @interface SearchViewController () <UISearchBarDelegate,UISearchControllerDelegate,UISearchResultsUpdating,UITableViewDelegate,UITableViewDataSource,UIBarPositioningDelegate>
 
@@ -118,6 +119,14 @@
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LibroTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
+    }
+    
+    if(libro.idUsuario != [User_Setup_DAO getUserSetup].idUsuario)
+    {
+        cell.mLibroPropio.hidden = YES;
+    }
+    else {
+        cell.mLibroPropio.hidden = NO;
     }
     
     if([libro.titulo  isEqual: @"El Señor de los Anillos"])

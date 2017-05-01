@@ -14,6 +14,7 @@
                 <outlet property="mAgregarFavoritos" destination="mkp-af-LiI" id="2ZJ-WT-pgS"/>
                 <outlet property="mCantidad" destination="nje-JJ-Gw1" id="nGu-3O-75a"/>
                 <outlet property="mDescripcion" destination="ySp-gH-dfG" id="AZR-8K-1mi"/>
+                <outlet property="mEstado" destination="pBS-gq-r6G" id="5ds-LH-WZt"/>
                 <outlet property="mImage" destination="H97-Li-kds" id="cuu-Ei-waY"/>
                 <outlet property="mInfoVendedor" destination="qvk-gs-PwG" id="oVp-ID-xmI"/>
                 <outlet property="mNombreVendedor" destination="LSU-is-WlB" id="gHM-rC-dWH"/>
@@ -105,6 +106,13 @@
                                 <action selector="agregarFavorito:" destination="-1" eventType="touchUpInside" id="Jul-bI-VUp"/>
                             </connections>
                         </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estado: Tu libro ha sido solicitado por el usuario dmo2." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBS-gq-r6G">
+                            <rect key="frame" x="23" y="550" width="329" height="59"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                 </scrollView>
             </subviews>

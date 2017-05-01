@@ -37,4 +37,10 @@
     
 }
 
+- (IBAction)botonAccount:(id)sender {
+    
+    [self.controladorPrincipal mostrarAccount];
+    
+}
+
 @end

@@ -13,6 +13,7 @@
 #import "Libro_DTO.h"
 #import "LibroTableViewCell.h"
 #import "BookViewController.h"
+#import "User_Setup_DAO.h"
 
 @interface NotificationsViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -84,6 +85,13 @@
         cell = [nib objectAtIndex:0];
     }
     
+    if(libro.idUsuario != [User_Setup_DAO getUserSetup].idUsuario)
+    {
+        cell.mLibroPropio.hidden = YES;
+    }
+    else {
+        cell.mLibroPropio.hidden = NO;
+    }
     
     if([libro.titulo  isEqual: @"El Señor de los Anillos"])
     {

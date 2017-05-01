@@ -18,6 +18,7 @@
 @class PublishViewController;
 @class NotificationsViewController;
 @class SettingsViewController;
+@class AccountViewController;
 
 
 @interface PrincipalController : UIViewController
@@ -47,6 +48,7 @@ typedef enum{
 @property PublishViewController * PublishViewController;
 @property NotificationsViewController * NotificationsViewController;
 @property SettingsViewController * SettingsViewController;
+@property AccountViewController * AccountViewController;
 
 @property NSNumber * idUsuario;
 @property SCREEN PANTALLA_ACTUAL;
@@ -57,5 +59,6 @@ typedef enum{
 
 - (void) mostrarLogin;
 - (void) mostrarPublish;
+- (void) mostrarAccount;
 
 @end

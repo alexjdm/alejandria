@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mDescripcion;
 @property (weak, nonatomic) IBOutlet UILabel *mISBN;
 @property (weak, nonatomic) IBOutlet UIButton *mGoButton;
+@property (weak, nonatomic) IBOutlet UIView *mLibroPropio;
 @property SearchViewController *sv;
 
 @end

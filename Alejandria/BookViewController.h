@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mUbicacionVendedor;
 @property (weak, nonatomic) IBOutlet UIButton *mUbicacionMaps;
 @property (weak, nonatomic) IBOutlet UIScrollView *mScrollView;
+@property (weak, nonatomic) IBOutlet UILabel *mEstado;
 
 
 

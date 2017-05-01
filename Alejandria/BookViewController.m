@@ -106,12 +106,18 @@
         [_mSolicitar setTitle:@"Solicitado!" forState:UIControlStateNormal];
         
         _mSolicitar.alpha = 0.55;
+        
+        _mEstado.text = @"Este libro ha sido solicitado.";
+        _mEstado.hidden = NO;
     }
     else
     {
         [_mSolicitar setTitle:@"Solicitar" forState:UIControlStateNormal];
         
         _mSolicitar.alpha = 1.0;
+        
+        _mEstado.text = @"Este libro se encuentra disponible.";
+        _mEstado.hidden = NO;
     }
     
 }

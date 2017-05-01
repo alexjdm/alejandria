@@ -15,6 +15,7 @@
 #import "PublishViewController.h"
 #import "NotificationsViewController.h"
 #import "SettingsViewController.h"
+#import "AccountViewController.h"
 
 @implementation PrincipalController
 
@@ -54,6 +55,9 @@
     
     _SettingsViewController = [[SettingsViewController alloc] init];
     _SettingsViewController.controladorPrincipal = self;
+    
+    _AccountViewController = [[AccountViewController alloc] init];
+    _AccountViewController.controladorPrincipal = self;
     
 }
 
@@ -264,6 +268,16 @@
     
     if(![self.navigationController.topViewController isKindOfClass:[_SettingsViewController class]]) {
         [self.navigationController pushViewController:_SettingsViewController animated:true];
+    }
+    
+}
+
+- (void) mostrarAccount {
+    
+    [self refrescarViewControllers];
+    
+    if(![self.navigationController.topViewController isKindOfClass:[_AccountViewController class]]) {
+        [self.navigationController pushViewController:_AccountViewController animated:true];
     }
     
 }

@@ -37,6 +37,9 @@
                             <state key="normal" title="Datos Personales">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="botonAccount:" destination="-1" eventType="touchUpInside" id="tNi-t9-Rd2"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9Z-rC-vZG">
                             <rect key="frame" x="16" y="136" width="343" height="20"/>
