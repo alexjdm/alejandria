@@ -15,5 +15,6 @@
 +(NSMutableArray*) getLibros;
 +(Libro_DTO*) getLibro:(NSNumber*) idLibro;
 +(bool) libro:(NSNumber*) idLibro esMio:(NSNumber*) idUsuario;
++(NSNumber*) getRandomIdFromUserId: (NSNumber*) idUsuario;
 
 @end

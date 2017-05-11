@@ -19,6 +19,8 @@
 @class NotificationsViewController;
 @class SettingsViewController;
 @class AccountViewController;
+@class ExchangesViewController;
+@class QuestionsViewController;
 
 
 @interface PrincipalController : UIViewController
@@ -49,6 +51,8 @@ typedef enum{
 @property NotificationsViewController * NotificationsViewController;
 @property SettingsViewController * SettingsViewController;
 @property AccountViewController * AccountViewController;
+@property ExchangesViewController * ExchangesViewController;
+@property QuestionsViewController * QuestionsViewController;
 
 @property NSNumber * idUsuario;
 @property SCREEN PANTALLA_ACTUAL;
@@ -60,5 +64,8 @@ typedef enum{
 - (void) mostrarLogin;
 - (void) mostrarPublish;
 - (void) mostrarAccount;
+- (void) mostrarExchanges;
+- (void) mostrarQuestions;
+- (void) fakeMatch;
 
 @end

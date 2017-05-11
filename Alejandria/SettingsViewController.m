@@ -19,6 +19,13 @@
     [super viewDidLoad];
     
     self.navigationItem.hidesBackButton = YES;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    self.navigationItem.title = @"Configuraciones";
+    
 }
 
 - (IBAction)botonPublicar:(id)sender {
@@ -42,5 +49,25 @@
     [self.controladorPrincipal mostrarAccount];
     
 }
+
+- (IBAction)botonIntercambios:(id)sender {
+    
+    [self.controladorPrincipal mostrarExchanges];
+    
+}
+
+- (IBAction)botonPreguntas:(id)sender {
+    
+    [self.controladorPrincipal mostrarQuestions];
+    
+}
+
+- (IBAction)botonSolicitudRandom:(id)sender {
+    
+    [self.controladorPrincipal fakeMatch];
+    
+}
+
+
 
 @end

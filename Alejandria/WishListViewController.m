@@ -24,6 +24,8 @@
     
     self.navigationItem.hidesBackButton = YES;
     
+    self.navigationItem.title = @"Favoritos";
+    
     _mTableView.delegate = self;
     _mTableView.dataSource=self;
     _mTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];

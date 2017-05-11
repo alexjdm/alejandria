@@ -12,6 +12,8 @@
 #import "LibroTableViewCell.h"
 #import "BookViewController.h"
 #import "User_Setup_DAO.h"
+#import "Request_DAO.h"
+#import "Request_DTO.h"
 
 @interface SearchViewController () <UISearchBarDelegate,UISearchControllerDelegate,UISearchResultsUpdating,UITableViewDelegate,UITableViewDataSource,UIBarPositioningDelegate>
 
@@ -68,13 +70,32 @@
     
 }
 
+-(int) getRequestNumber:(NSMutableArray *) requests idLibro: (NSNumber*) idLibro{
+    
+    int count = 0;
+    for (Request_DTO* req in requests)
+    {
+        if(req.idLibro == idLibro)
+            count = count + 1;
+    }
+    
+    return count;
+}
+
 -(void) loadSourceDataLibros {
     
     _sourceDataLibros = [[NSMutableArray alloc] init];
-    NSMutableArray * source = [Libro_DAO getLibros];
+    NSMutableArray * source0 = [Libro_DAO getLibros];
+    NSMutableArray * source1 = [Request_DAO getSolicitudes];
     
-    for (Libro_DTO *l_dto in source) {
-        [_sourceDataLibros addObject:l_dto];
+    //Filtrar libros que no tienen stock
+    int ctd = 0;
+    for (Libro_DTO *l_dto in source0) {
+        
+        ctd = [self getRequestNumber:source1 idLibro:l_dto.idLibro];
+        
+        if([l_dto.cantidad intValue] > ctd)
+            [_sourceDataLibros addObject:l_dto];
     }
     
     [_mTableView reloadData];

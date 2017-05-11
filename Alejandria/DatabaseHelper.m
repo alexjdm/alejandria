@@ -34,6 +34,8 @@
     
     BOOL success4 __unused =[db executeStatements:@"CREATE TABLE solicitud (idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, idLibro INTEGER, idUsuarioSolicitante INTEGER, fecha datetime, idLibroCambio INTEGER, idUsuarioCambio INTEGER, estado TEXT);"];
     
+    BOOL success5 __unused =[db executeStatements:@"CREATE TABLE mensaje (idMensaje INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, idMensajePadre INTEGER, texto TEXT, fecha datetime, idLibro INTEGER, idUsuarioSender INTEGER);"];
+    
     BOOL success64 __unused =[db executeStatements:@"CREATE TABLE LOG (ID_LOG INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,FECHA_LOG DATETIME,DESCRIPCION_LOG TEXT);"];
     
     

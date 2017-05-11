@@ -16,6 +16,11 @@
 #import "NotificationsViewController.h"
 #import "SettingsViewController.h"
 #import "AccountViewController.h"
+#import "ExchangesViewController.h"
+#import "QuestionsViewController.h"
+#import "Request_DAO.h"
+#import "Request_DTO.h"
+#import "Libro_DAO.h"
 
 @implementation PrincipalController
 
@@ -59,6 +64,11 @@
     _AccountViewController = [[AccountViewController alloc] init];
     _AccountViewController.controladorPrincipal = self;
     
+    _ExchangesViewController = [[ExchangesViewController alloc] init];
+    _ExchangesViewController.controladorPrincipal = self;
+    
+    _QuestionsViewController = [[QuestionsViewController alloc] init];
+    _QuestionsViewController.controladorPrincipal = self;
 }
 
 -(void) recuperarEstado{
@@ -279,6 +289,42 @@
     if(![self.navigationController.topViewController isKindOfClass:[_AccountViewController class]]) {
         [self.navigationController pushViewController:_AccountViewController animated:true];
     }
+    
+}
+
+- (void) mostrarExchanges {
+    
+    [self refrescarViewControllers];
+    
+    if(![self.navigationController.topViewController isKindOfClass:[_ExchangesViewController class]]) {
+        [self.navigationController pushViewController:_ExchangesViewController animated:true];
+    }
+    
+}
+
+- (void) mostrarQuestions {
+    
+    [self refrescarViewControllers];
+    
+    if(![self.navigationController.topViewController isKindOfClass:[_QuestionsViewController class]]) {
+        [self.navigationController pushViewController:_QuestionsViewController animated:true];
+    }
+    
+}
+
+- (void) fakeMatch {
+    
+    User_Setup_DTO * current = [User_Setup_DAO getUserSetup];
+    
+    NSNumber* idLibroRandom = [Libro_DAO getRandomIdFromUserId:current.idUsuario];
+    
+    Request_DTO *solicitud = [[Request_DTO alloc]init];
+    solicitud.idLibro = idLibroRandom;
+    solicitud.idUsuarioSolicitante = [NSNumber numberWithInt:2];
+    solicitud.fecha = [NSDate date];
+    solicitud.estado = @"pending";
+    
+    [Request_DAO save:solicitud];
     
 }
 

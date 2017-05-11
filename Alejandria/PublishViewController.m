@@ -11,8 +11,7 @@
 #import "Libro_DTO.h"
 #import "Helpers.h"
 #import "User_Setup_DAO.h"
-#import "Request_DAO.h"
-#import "Request_DTO.h"
+
 
 @interface PublishViewController () <UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -26,6 +25,7 @@
     [self setupScroll];
     //NSLog(@"inico2 %f", self.view.frame.origin.y);
     self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.title = @"Publicar";
     
     // Boton "Ok"
     UIButton *buttonPublish = [[UIButton alloc] initWithFrame:CGRectMake(55, 0, 63, 40)];
@@ -110,15 +110,6 @@
         
         
         [Libro_DAO save:libro];
-        
-        // Fake Match
-        Request_DTO *solicitud = [[Request_DTO alloc]init];
-        solicitud.idLibro = libro.idLibro;
-        solicitud.idUsuarioSolicitante = [NSNumber numberWithInt:2];
-        solicitud.fecha = [NSDate date];
-        solicitud.estado = @"pending";
-        
-        [Request_DAO save:solicitud];
         
         _mUploadOk.hidden = NO;
         

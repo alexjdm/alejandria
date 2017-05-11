@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12029F781EBE0CC200EADE34 /* ExchangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12029F761EBE0CC200EADE34 /* ExchangeTableViewCell.m */; };
+		12029F791EBE0CC200EADE34 /* ExchangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12029F771EBE0CC200EADE34 /* ExchangeTableViewCell.xib */; };
+		12029F7B1EC40CCA00EADE34 /* JakeCircleProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 12029F7A1EC40CCA00EADE34 /* JakeCircleProfile.png */; };
 		120A1CC71E85DCA9003DA829 /* Favorito_DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 120A1CC61E85DCA9003DA829 /* Favorito_DAO.m */; };
 		120A1CCA1E85DCDB003DA829 /* Favorito_DTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 120A1CC91E85DCDB003DA829 /* Favorito_DTO.m */; };
 		120DCFA11E4FB72B002D4455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 120DCFA01E4FB72B002D4455 /* main.m */; };
@@ -59,6 +62,10 @@
 		125849C21E5E84420062B227 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 125849C11E5E84420062B227 /* FMResultSet.m */; };
 		126AD1F81EB6FB3300F715F3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126AD1F61EB6FB3300F715F3 /* AccountViewController.m */; };
 		126AD1F91EB6FB3300F715F3 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126AD1F71EB6FB3300F715F3 /* AccountViewController.xib */; };
+		126AD1FE1EB7772A00F715F3 /* ExchangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126AD1FC1EB7772A00F715F3 /* ExchangesViewController.m */; };
+		126AD1FF1EB7772A00F715F3 /* ExchangesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126AD1FD1EB7772A00F715F3 /* ExchangesViewController.xib */; };
+		126AD2041EB7778700F715F3 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126AD2021EB7778700F715F3 /* QuestionsViewController.m */; };
+		126AD2051EB7778700F715F3 /* QuestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126AD2031EB7778700F715F3 /* QuestionsViewController.xib */; };
 		12A7F8E81E7B7AEE003327D0 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A7F8E71E7B7AEE003327D0 /* BookViewController.xib */; };
 		12F6B61D1E889D16006CFE84 /* Request_DTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F6B61C1E889D16006CFE84 /* Request_DTO.m */; };
 		12F6B6201E889D66006CFE84 /* Request_DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F6B61F1E889D66006CFE84 /* Request_DAO.m */; };
@@ -85,6 +92,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12029F751EBE0CC200EADE34 /* ExchangeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeTableViewCell.h; sourceTree = "<group>"; };
+		12029F761EBE0CC200EADE34 /* ExchangeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeTableViewCell.m; sourceTree = "<group>"; };
+		12029F771EBE0CC200EADE34 /* ExchangeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeTableViewCell.xib; sourceTree = "<group>"; };
+		12029F7A1EC40CCA00EADE34 /* JakeCircleProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JakeCircleProfile.png; sourceTree = "<group>"; };
 		120A1CC51E85DCA9003DA829 /* Favorito_DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorito_DAO.h; sourceTree = "<group>"; };
 		120A1CC61E85DCA9003DA829 /* Favorito_DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorito_DAO.m; sourceTree = "<group>"; };
 		120A1CC81E85DCDB003DA829 /* Favorito_DTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorito_DTO.h; sourceTree = "<group>"; };
@@ -171,6 +182,12 @@
 		126AD1F51EB6FB3300F715F3 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		126AD1F61EB6FB3300F715F3 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		126AD1F71EB6FB3300F715F3 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		126AD1FB1EB7772A00F715F3 /* ExchangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangesViewController.h; sourceTree = "<group>"; };
+		126AD1FC1EB7772A00F715F3 /* ExchangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangesViewController.m; sourceTree = "<group>"; };
+		126AD1FD1EB7772A00F715F3 /* ExchangesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangesViewController.xib; sourceTree = "<group>"; };
+		126AD2011EB7778700F715F3 /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
+		126AD2021EB7778700F715F3 /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
+		126AD2031EB7778700F715F3 /* QuestionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsViewController.xib; sourceTree = "<group>"; };
 		12A7F8E71E7B7AEE003327D0 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
 		12F6B61B1E889D16006CFE84 /* Request_DTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request_DTO.h; sourceTree = "<group>"; };
 		12F6B61C1E889D16006CFE84 /* Request_DTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request_DTO.m; sourceTree = "<group>"; };
@@ -207,6 +224,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12029F741EBE0C9F00EADE34 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				12029F751EBE0CC200EADE34 /* ExchangeTableViewCell.h */,
+				12029F761EBE0CC200EADE34 /* ExchangeTableViewCell.m */,
+				12029F771EBE0CC200EADE34 /* ExchangeTableViewCell.xib */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 		120DCF931E4FB72B002D4455 = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +494,8 @@
 		125849A51E5E65A80062B227 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				126AD2001EB7775200F715F3 /* Questions */,
+				126AD1FA1EB776E700F715F3 /* Exchanges */,
 				126AD1F41EB6FB0E00F715F3 /* Account */,
 				125849A61E5E65B80062B227 /* SettingsViewController.h */,
 				125849A71E5E65B80062B227 /* SettingsViewController.m */,
@@ -478,6 +507,7 @@
 		125849AB1E5E75120062B227 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				12029F7A1EC40CCA00EADE34 /* JakeCircleProfile.png */,
 				12F6B6211E88A721006CFE84 /* cien1.jpg */,
 				12F6B6221E88A721006CFE84 /* harrypotter1.jpg */,
 				12F6B6231E88A721006CFE84 /* elsenor1.jpg */,
@@ -513,6 +543,27 @@
 				126AD1F71EB6FB3300F715F3 /* AccountViewController.xib */,
 			);
 			name = Account;
+			sourceTree = "<group>";
+		};
+		126AD1FA1EB776E700F715F3 /* Exchanges */ = {
+			isa = PBXGroup;
+			children = (
+				12029F741EBE0C9F00EADE34 /* SubViews */,
+				126AD1FB1EB7772A00F715F3 /* ExchangesViewController.h */,
+				126AD1FC1EB7772A00F715F3 /* ExchangesViewController.m */,
+				126AD1FD1EB7772A00F715F3 /* ExchangesViewController.xib */,
+			);
+			name = Exchanges;
+			sourceTree = "<group>";
+		};
+		126AD2001EB7775200F715F3 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				126AD2011EB7778700F715F3 /* QuestionsViewController.h */,
+				126AD2021EB7778700F715F3 /* QuestionsViewController.m */,
+				126AD2031EB7778700F715F3 /* QuestionsViewController.xib */,
+			);
+			name = Questions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,9 +675,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126AD2051EB7778700F715F3 /* QuestionsViewController.xib in Resources */,
 				120DCFDE1E4FB8D6002D4455 /* LoginViewController.xib in Resources */,
+				12029F7B1EC40CCA00EADE34 /* JakeCircleProfile.png in Resources */,
 				123E4B511E64A07E002B15AD /* book_store.jpg in Resources */,
 				120DCFAF1E4FB72B002D4455 /* LaunchScreen.storyboard in Resources */,
+				126AD1FF1EB7772A00F715F3 /* ExchangesViewController.xib in Resources */,
 				123E4B691E672B79002B15AD /* LibroTableViewCell.xib in Resources */,
 				123E4B331E648589002B15AD /* NotificationsViewController.xib in Resources */,
 				120DCFAC1E4FB72B002D4455 /* images.xcassets in Resources */,
@@ -644,6 +698,7 @@
 				123E4B601E653497002B15AD /* ok_icon.jpg in Resources */,
 				125849B51E5E7A7E0062B227 /* Password-52.png in Resources */,
 				12A7F8E81E7B7AEE003327D0 /* BookViewController.xib in Resources */,
+				12029F791EBE0CC200EADE34 /* ExchangeTableViewCell.xib in Resources */,
 				125849A41E5E65980062B227 /* PublishViewController.xib in Resources */,
 				12F6B6261E88A721006CFE84 /* elsenor1.jpg in Resources */,
 				126AD1F91EB6FB3300F715F3 /* AccountViewController.xib in Resources */,
@@ -681,6 +736,8 @@
 				125849B81E5E7C310062B227 /* User_Setup_DTO.m in Sources */,
 				120DCFDD1E4FB8D6002D4455 /* LoginViewController.m in Sources */,
 				120DCFE61E4FBBAB002D4455 /* UserBusiness.m in Sources */,
+				126AD2041EB7778700F715F3 /* QuestionsViewController.m in Sources */,
+				126AD1FE1EB7772A00F715F3 /* ExchangesViewController.m in Sources */,
 				120A1CCA1E85DCDB003DA829 /* Favorito_DTO.m in Sources */,
 				120DCFA71E4FB72B002D4455 /* ViewController.m in Sources */,
 				123E4B631E670803002B15AD /* Libro_DAO.m in Sources */,
@@ -688,6 +745,7 @@
 				120DCFA41E4FB72B002D4455 /* AppDelegate.m in Sources */,
 				120A1CC71E85DCA9003DA829 /* Favorito_DAO.m in Sources */,
 				120DCFA11E4FB72B002D4455 /* main.m in Sources */,
+				12029F781EBE0CC200EADE34 /* ExchangeTableViewCell.m in Sources */,
 				12F6B6201E889D66006CFE84 /* Request_DAO.m in Sources */,
 				125849A91E5E65B80062B227 /* SettingsViewController.m in Sources */,
 				123E4B4C1E649811002B15AD /* MTMigration.m in Sources */,

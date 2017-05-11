@@ -30,6 +30,9 @@
                             <state key="normal" title="Preguntas">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="botonPreguntas:" destination="-1" eventType="touchUpInside" id="gUl-5E-xB6"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGu-Hu-rfF">
                             <rect key="frame" x="16" y="215" width="343" height="20"/>
@@ -47,6 +50,9 @@
                             <state key="normal" title="Intercambios realizados">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="botonIntercambios:" destination="-1" eventType="touchUpInside" id="prW-xI-UIo"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXN-vr-D47">
                             <rect key="frame" x="16" y="243" width="343" height="20"/>
@@ -81,6 +87,17 @@
                             </state>
                             <connections>
                                 <action selector="botonPublicar:" destination="-1" eventType="touchUpInside" id="sOD-ZK-Rr9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85a-vc-DxG">
+                            <rect key="frame" x="16" y="629" width="343" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="0.82745098039999998" green="0.18039215689999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Crear solicitud random">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="botonSolicitudRandom:" destination="-1" eventType="touchUpInside" id="T2L-t1-hai"/>
                             </connections>
                         </button>
                     </subviews>

@@ -1,40 +1,51 @@
 //
-//  NotificationsViewController.m
+//  ExchangesViewController.m
 //  Alejandria
 //
-//  Created by Alex Diaz on 2/27/17.
+//  Created by Alex Diaz on 5/1/17.
 //  Copyright © 2017 Alex Diaz. All rights reserved.
 //
 
-#import "NotificationsViewController.h"
+#import "ExchangesViewController.h"
 #import "Request_DAO.h"
 #import "Request_DTO.h"
 #import "Libro_DAO.h"
 #import "Libro_DTO.h"
-#import "LibroTableViewCell.h"
+#import "ExchangeTableViewCell.h"
 #import "BookViewController.h"
 #import "User_Setup_DAO.h"
 
-@interface NotificationsViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface ExchangesViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation NotificationsViewController
+@implementation ExchangesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.title = @"Notificaciones";
+    //self.navigationItem.hidesBackButton = YES;
+    self.navigationController.navigationBar.topItem.title = @"";
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationItem.title = @"Intercambios";
     
     _mTableView.delegate = self;
     _mTableView.dataSource=self;
     _mTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    _mTableView.allowsSelection = NO;
 }
 
 -(void) viewWillAppear:(BOOL)animated {
     
+    [self.navigationController setToolbarHidden:YES];
+    
     [self loadSourceDataSolicitudes];
+    
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    
+    [self.navigationController setToolbarHidden:NO];
     
 }
 
@@ -58,12 +69,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LibroTableViewCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExchangeTableViewCell"];
     NSObject *mObject;
     
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LibroTableViewCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ExchangeTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
@@ -78,36 +89,28 @@
 
 -(UITableViewCell *) cellWithLibro:(Libro_DTO *) libro forTable:(UITableView *)table :(NSInteger) identificador{
     
-    static NSString *simpleTableIdentifier = @"LibroTableViewCell";
-    LibroTableViewCell *cell = (LibroTableViewCell *)[table dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"ExchangeTableViewCell";
+    ExchangeTableViewCell *cell = (ExchangeTableViewCell *)[table dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LibroTableViewCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ExchangeTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-    }
-    
-    if(libro.idUsuario != [User_Setup_DAO getUserSetup].idUsuario)
-    {
-        cell.mLibroPropio.hidden = YES;
-    }
-    else {
-        cell.mLibroPropio.hidden = NO;
     }
     
     if([libro.titulo  isEqual: @"El Señor de los Anillos"])
     {
         UIImage *img = [[UIImage imageNamed:@"elsenor1.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        cell.mImage.image = img;
+        cell.mImagen.image = img;
     }
     else if ([libro.titulo  isEqual: @"Harry Potter"])
     {
         UIImage *img = [[UIImage imageNamed:@"harrypotter1.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        cell.mImage.image = img;
+        cell.mImagen.image = img;
     }
     else if ([libro.titulo  isEqual: @"One Hundred Years of Solitude"])
     {
         UIImage *img = [[UIImage imageNamed:@"cien1.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        cell.mImage.image = img;
+        cell.mImagen.image = img;
     }
     else if(libro.url_local != nil && ![libro.url_local  isEqual: @""])
     {
@@ -119,13 +122,19 @@
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *getImagePath = [documentsDirectory stringByAppendingPathComponent:imageName];
         UIImage *image = [[UIImage alloc] initWithContentsOfFile:getImagePath];
-        cell.mImage.image = image;
+        cell.mImagen.image = image;
     }
     
     //cell.sv = self;
     cell.mTitulo.text = libro.titulo;
-    cell.mISBN.text = [NSString stringWithFormat:@"ISBN: %@", libro.isbn];
-    cell.mDescripcion.text = libro.descripcion;
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    format.dateFormat = @"dd-MM-yyyy";
+    
+    cell.mFecha.text = [NSString stringWithFormat:@"Intercambio realizado el %@", [format stringFromDate:libro.fecha]];
+    
+    User_Setup_DTO*userAnterior = [User_Setup_DAO getUser:libro.idUsuario];
+    cell.mUsuario.text = [NSString stringWithFormat:@"%@ era el dueño anterior", userAnterior.nombres];
     
     
     return cell;
@@ -134,16 +143,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSDictionary *mObject = [_sourceDataSolicitudes objectAtIndex:indexPath.row];
-    Request_DTO *fav = (Request_DTO *)mObject;
-    Libro_DTO *libro = [Libro_DAO getLibro:fav.idLibro];
-    
-    BookViewController *bv = [[BookViewController alloc]init];
-    bv.libro = libro;
-    
-    [self.navigationController pushViewController:bv animated:true];
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    NSDictionary *mObject = [_sourceDataSolicitudes objectAtIndex:indexPath.row];
+//    Request_DTO *fav = (Request_DTO *)mObject;
+//    Libro_DTO *libro = [Libro_DAO getLibro:fav.idLibro];
+//    
+//    BookViewController *bv = [[BookViewController alloc]init];
+//    bv.libro = libro;
+//    
+//    [self.navigationController pushViewController:bv animated:true];
+//    
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -158,7 +167,7 @@
     else
     {
         UILabel *noDataLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, _mTableView.bounds.size.width, _mTableView.bounds.size.height)];
-        noDataLabel.text             = @"No tienes Solicitudes";
+        noDataLabel.text             = @"No has realizado intercambios";
         noDataLabel.textColor        = [UIColor blackColor];
         noDataLabel.textAlignment    = NSTextAlignmentCenter;
         _mTableView.backgroundView = noDataLabel;
@@ -172,6 +181,8 @@
 {
     return 90;
 }
+
+
 
 
 @end

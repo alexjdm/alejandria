@@ -53,6 +53,7 @@
         libro.idUsuario = [NSNumber numberWithInt:[results intForColumn:@"idUsuario"]];
         libro.isUploaded = [NSNumber numberWithInt:[results intForColumn:@"isUploaded"]];
         libro.cantidad = [NSNumber numberWithInt:[results intForColumn:@"cantidad"]];
+        libro.fecha = [results dateForColumn:@"fecha"];
         
         [libros addObject:libro];
         
@@ -82,7 +83,8 @@
         libro.descripcion = [results stringForColumn:@"descripcion"];
         libro.idUsuario = [NSNumber numberWithInt:[results intForColumn:@"idUsuario"]];
         libro.isUploaded = [NSNumber numberWithInt:[results intForColumn:@"isUploaded"]];
-        libro.cantidad = [NSNumber numberWithInt:[results intForColumn:@"cantidad"]];   
+        libro.cantidad = [NSNumber numberWithInt:[results intForColumn:@"cantidad"]];
+        libro.fecha = [results dateForColumn:@"fecha"];
     }
     
     [db close];
@@ -98,6 +100,27 @@
         return true;
     else
         return false;
+    
+}
+
++(NSNumber*) getRandomIdFromUserId: (NSNumber*) idUsuario; {
+    
+    FMDatabase *db = [FMDatabase databaseWithPath:[Helpers getDatabasePath]];
+    
+    [db open];
+    
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM libro WHERE id_usuario = ? ORDER BY RANDOM() LIMIT 1;", idUsuario];
+    
+    Libro_DTO *libro;
+    while([results next])
+    {
+        libro = [[Libro_DTO alloc] init];
+        libro.idLibro = [NSNumber numberWithInt:[results intForColumn:@"idLibro"]];
+    }
+    
+    [db close];
+    
+    return libro.idLibro;
     
 }
 
