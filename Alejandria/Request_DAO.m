@@ -35,7 +35,7 @@
     
     [db open];
     
-    FMResultSet *results = [db executeQuery:@"SELECT * FROM solicitud"];
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM solicitud order by fecha desc"];
     
     Request_DTO *solicitud;
     while([results next])

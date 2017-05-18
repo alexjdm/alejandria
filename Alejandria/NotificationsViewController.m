@@ -11,7 +11,7 @@
 #import "Request_DTO.h"
 #import "Libro_DAO.h"
 #import "Libro_DTO.h"
-#import "LibroTableViewCell.h"
+#import "NotificationTableViewCell.h"
 #import "BookViewController.h"
 #import "User_Setup_DAO.h"
 
@@ -58,12 +58,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LibroTableViewCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NotificationTableViewCell"];
     NSObject *mObject;
     
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LibroTableViewCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NotificationTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
@@ -72,26 +72,18 @@
     Libro_DTO *lib = [Libro_DAO getLibro:fav.idLibro];
     
     
-    return [self cellWithLibro:lib forTable:tableView:indexPath.row];
+    return [self cellWithLibro:lib andRequest:fav forTable:tableView:indexPath.row];
     
 }
 
--(UITableViewCell *) cellWithLibro:(Libro_DTO *) libro forTable:(UITableView *)table :(NSInteger) identificador{
+-(UITableViewCell *) cellWithLibro:(Libro_DTO *) libro andRequest: (Request_DTO*) solicitud forTable:(UITableView *)table :(NSInteger) identificador{
     
-    static NSString *simpleTableIdentifier = @"LibroTableViewCell";
-    LibroTableViewCell *cell = (LibroTableViewCell *)[table dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"NotificationTableViewCell";
+    NotificationTableViewCell *cell = (NotificationTableViewCell *)[table dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LibroTableViewCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NotificationTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-    }
-    
-    if(libro.idUsuario != [User_Setup_DAO getUserSetup].idUsuario)
-    {
-        cell.mLibroPropio.hidden = YES;
-    }
-    else {
-        cell.mLibroPropio.hidden = NO;
     }
     
     if([libro.titulo  isEqual: @"El Señor de los Anillos"])
@@ -123,9 +115,15 @@
     }
     
     //cell.sv = self;
-    cell.mTitulo.text = libro.titulo;
-    cell.mISBN.text = [NSString stringWithFormat:@"ISBN: %@", libro.isbn];
-    cell.mDescripcion.text = libro.descripcion;
+    
+    User_Setup_DTO * usuarioSolicitante = [User_Setup_DAO getUser:solicitud.idUsuarioSolicitante];
+    
+    cell.mTitulo.text = [NSString stringWithFormat:@"Tu libro %@ ha sido solicitado por el usuario %@", libro.titulo, usuarioSolicitante.nombres];
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    format.dateFormat = @"dd-MM-yyyy HH:mm:ss";
+    
+    cell.mFecha.text = [NSString stringWithFormat:@"%@", [format stringFromDate:solicitud.fecha]];
     
     
     return cell;

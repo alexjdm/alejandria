@@ -67,6 +67,8 @@
 		126AD2041EB7778700F715F3 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126AD2021EB7778700F715F3 /* QuestionsViewController.m */; };
 		126AD2051EB7778700F715F3 /* QuestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126AD2031EB7778700F715F3 /* QuestionsViewController.xib */; };
 		12A7F8E81E7B7AEE003327D0 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A7F8E71E7B7AEE003327D0 /* BookViewController.xib */; };
+		12F272CC1ECDE05200B85615 /* NotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F272CA1ECDE05200B85615 /* NotificationTableViewCell.m */; };
+		12F272CD1ECDE05200B85615 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F272CB1ECDE05200B85615 /* NotificationTableViewCell.xib */; };
 		12F6B61D1E889D16006CFE84 /* Request_DTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F6B61C1E889D16006CFE84 /* Request_DTO.m */; };
 		12F6B6201E889D66006CFE84 /* Request_DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F6B61F1E889D66006CFE84 /* Request_DAO.m */; };
 		12F6B6241E88A721006CFE84 /* cien1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12F6B6211E88A721006CFE84 /* cien1.jpg */; };
@@ -189,6 +191,9 @@
 		126AD2021EB7778700F715F3 /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
 		126AD2031EB7778700F715F3 /* QuestionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsViewController.xib; sourceTree = "<group>"; };
 		12A7F8E71E7B7AEE003327D0 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
+		12F272C91ECDE05200B85615 /* NotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationTableViewCell.h; sourceTree = "<group>"; };
+		12F272CA1ECDE05200B85615 /* NotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTableViewCell.m; sourceTree = "<group>"; };
+		12F272CB1ECDE05200B85615 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		12F6B61B1E889D16006CFE84 /* Request_DTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request_DTO.h; sourceTree = "<group>"; };
 		12F6B61C1E889D16006CFE84 /* Request_DTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request_DTO.m; sourceTree = "<group>"; };
 		12F6B61E1E889D66006CFE84 /* Request_DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request_DAO.h; sourceTree = "<group>"; };
@@ -416,6 +421,7 @@
 		123E4B2E1E648572002B15AD /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				12F272C81ECDE03200B85615 /* SubViews */,
 				123E4B2F1E648589002B15AD /* NotificationsViewController.h */,
 				123E4B301E648589002B15AD /* NotificationsViewController.m */,
 				123E4B311E648589002B15AD /* NotificationsViewController.xib */,
@@ -566,6 +572,16 @@
 			name = Questions;
 			sourceTree = "<group>";
 		};
+		12F272C81ECDE03200B85615 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				12F272C91ECDE05200B85615 /* NotificationTableViewCell.h */,
+				12F272CA1ECDE05200B85615 /* NotificationTableViewCell.m */,
+				12F272CB1ECDE05200B85615 /* NotificationTableViewCell.xib */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -701,6 +717,7 @@
 				12029F791EBE0CC200EADE34 /* ExchangeTableViewCell.xib in Resources */,
 				125849A41E5E65980062B227 /* PublishViewController.xib in Resources */,
 				12F6B6261E88A721006CFE84 /* elsenor1.jpg in Resources */,
+				12F272CD1ECDE05200B85615 /* NotificationTableViewCell.xib in Resources */,
 				126AD1F91EB6FB3300F715F3 /* AccountViewController.xib in Resources */,
 				1258499D1E5E656D0062B227 /* WishListViewController.xib in Resources */,
 			);
@@ -729,6 +746,7 @@
 			files = (
 				120DCFE11E4FB917002D4455 /* PrincipalController.m in Sources */,
 				1258499C1E5E656D0062B227 /* WishListViewController.m in Sources */,
+				12F272CC1ECDE05200B85615 /* NotificationTableViewCell.m in Sources */,
 				123E4B5E1E652E09002B15AD /* Libro_DTO.m in Sources */,
 				125849C21E5E84420062B227 /* FMResultSet.m in Sources */,
 				125849BF1E5E83FA0062B227 /* FMDatabase.m in Sources */,

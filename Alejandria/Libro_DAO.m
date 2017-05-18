@@ -109,7 +109,7 @@
     
     [db open];
     
-    FMResultSet *results = [db executeQuery:@"SELECT * FROM libro WHERE id_usuario = ? ORDER BY RANDOM() LIMIT 1;", idUsuario];
+    FMResultSet *results = [db executeQuery:@"SELECT * FROM libro WHERE idUsuario = ? ORDER BY RANDOM() LIMIT 1;", idUsuario];
     
     Libro_DTO *libro;
     while([results next])

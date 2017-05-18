@@ -12,8 +12,8 @@
 @interface SettingsViewController : UIViewController
 
 @property PrincipalController * controladorPrincipal;
-
+@property (weak, nonatomic) IBOutlet UIButton *mButtonRandom;
 @property (weak, nonatomic) IBOutlet UIButton *mButtonPublish;
-
+@property UIColor* buttonColor;
 
 @end

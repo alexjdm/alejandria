@@ -145,6 +145,7 @@
     _mDescripcion.text = @"";
     _mISBN.text = @"";
     _mImage.image = [UIImage imageNamed:@"camera-512.png"];
+    _mCantidad.text = @"";
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -202,7 +203,7 @@
     if(_mNombre.text.length > 60)
         _mNombre.text = [_mNombre.text substringToIndex:60];
     
-    _mNombreCuenta.text = [NSString stringWithFormat:@"%lu de 60", _mNombre.text.length, nil];
+    _mNombreCuenta.text = [NSString stringWithFormat:@"%u de 60", _mNombre.text.length, nil];
     
 }
 

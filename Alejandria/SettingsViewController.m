@@ -64,10 +64,31 @@
 
 - (IBAction)botonSolicitudRandom:(id)sender {
     
+    NSLog(@"Inicio %@", [NSDate date]);
+    
+    _buttonColor = _mButtonPublish.backgroundColor;
+    
+    _mButtonRandom.backgroundColor = [UIColor lightGrayColor];
+    [_mButtonRandom setTitle:@"Creando solicitud..." forState:UIControlStateNormal];
+    
     [self.controladorPrincipal fakeMatch];
     
+    [NSTimer scheduledTimerWithTimeInterval: 2.0
+                                                  target: self
+                                                selector:@selector(onTick:)
+                                                userInfo: nil repeats:NO];
+    
+    //[self performSelector:@selector(onTick:) withObject:nil afterDelay:2.0];
 }
 
+-(void)onTick:(NSTimer *)timer {
+    //do smth
+    
+    NSLog(@"Fin %@", [NSDate date]);
+    
+    _mButtonRandom.backgroundColor = _buttonColor;
+    [_mButtonRandom setTitle:@"Crear solicitud random" forState:UIControlStateNormal];
+}
 
 
 @end

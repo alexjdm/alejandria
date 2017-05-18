@@ -129,7 +129,7 @@
     cell.mTitulo.text = libro.titulo;
     
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    format.dateFormat = @"dd-MM-yyyy";
+    format.dateFormat = @"dd-MM-yyyy HH:mm:ss";
     
     cell.mFecha.text = [NSString stringWithFormat:@"Intercambio realizado el %@", [format stringFromDate:libro.fecha]];
     
